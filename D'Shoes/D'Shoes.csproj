@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A8BD9EE-7A68-4C28-835C-E3A073DF5FFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>D_Shoes</RootNamespace>
+    <AssemblyName>D%27Shoes</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\PRG2_KEL05\PRG2_KEL05\Source Code\ProjekAkhir_Kel05\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalForm\CustomerTransHIst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalForm\CustomerTransHIst.Designer.cs">
+      <DependentUpon>CustomerTransHIst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalForm\ViewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalForm\ViewEmployee.Designer.cs">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalForm\ViewEmployeeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalForm\ViewEmployeeType.Designer.cs">
+      <DependentUpon>ViewEmployeeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalForm\ViewShoesCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalForm\ViewShoesCashier.Designer.cs">
+      <DependentUpon>ViewShoesCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierDashboard.Designer.cs">
+      <DependentUpon>CashierDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdOtomatis.cs" />
+    <Compile Include="LoadCRUDSepatu.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadCRUDSepatu.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadCRUDSepatu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadCRUDSepatu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadCRUDSepatu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadCRUDSepatu.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDGaransi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDGaransi.Designer.cs">
+      <DependentUpon>CRUDGaransi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDJabatan.Designer.cs">
+      <DependentUpon>CRUDJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDKategoriSepatu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDKategoriSepatu.Designer.cs">
+      <DependentUpon>CRUDKategoriSepatu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDCustomer.Designer.cs">
+      <DependentUpon>CRUDCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDPegawai.Designer.cs">
+      <DependentUpon>CRUDPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDSepatu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDSepatu.Designer.cs">
+      <DependentUpon>CRUDSepatu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDSupplier.Designer.cs">
+      <DependentUpon>CRUDSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDTipeMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDTipeMember.Designer.cs">
+      <DependentUpon>CRUDTipeMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUDTipePembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUDTipePembayaran.Designer.cs">
+      <DependentUpon>CRUDTipePembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\KasirMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\KasirMenu.Designer.cs">
+      <DependentUpon>KasirMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ManagerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ManagerMenu.Designer.cs">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRG2_KEL09DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRG2_KEL09DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PRG2_KEL09DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRG2_KEL09DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PRG2_KEL09DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRG2_KEL09DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PRG2_KEL09DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRG2_KEL09DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\DsTsMember.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsTsMember.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DsTsPembelian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsTsPembelian.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DsTsPenjualan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsTsPenjualan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportMember.Designer.cs">
+      <DependentUpon>ReportMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTsPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTsPembelian.Designer.cs">
+      <DependentUpon>ReportTsPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTsPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTsPenjualan.Designer.cs">
+      <DependentUpon>ReportTsPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="tblSepatu.cs">
+      <DependentUpon>LoadCRUDSepatu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\StatusSepatuGaransi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\StatusSepatuGaransi.Designer.cs">
+      <DependentUpon>StatusSepatuGaransi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\StatusSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\StatusSupplier.Designer.cs">
+      <DependentUpon>StatusSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\TransaksiBeli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\TransaksiBeli.Designer.cs">
+      <DependentUpon>TransaksiBeli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\TransaksiGaransi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\TransaksiGaransi.Designer.cs">
+      <DependentUpon>TransaksiGaransi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\TransaksiJual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\TransaksiJual.Designer.cs">
+      <DependentUpon>TransaksiJual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\TransaksiMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\TransaksiMember.Designer.cs">
+      <DependentUpon>TransaksiMember.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdditionalForm\CustomerTransHIst.resx">
+      <DependentUpon>CustomerTransHIst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalForm\ViewEmployee.resx">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalForm\ViewEmployeeType.resx">
+      <DependentUpon>ViewEmployeeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalForm\ViewShoesCashier.resx">
+      <DependentUpon>ViewShoesCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierDashboard.resx">
+      <DependentUpon>CashierDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDCustomer.resx">
+      <DependentUpon>CRUDCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDGaransi.resx">
+      <DependentUpon>CRUDGaransi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDJabatan.resx">
+      <DependentUpon>CRUDJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDKategoriSepatu.resx">
+      <DependentUpon>CRUDKategoriSepatu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDPegawai.resx">
+      <DependentUpon>CRUDPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDSepatu.resx">
+      <DependentUpon>CRUDSepatu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDSupplier.resx">
+      <DependentUpon>CRUDSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDTipeMember.resx">
+      <DependentUpon>CRUDTipeMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUDTipePembayaran.resx">
+      <DependentUpon>CRUDTipePembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\KasirMenu.resx">
+      <DependentUpon>KasirMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ManagerMenu.resx">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1TsMember.rdlc" />
+    <EmbeddedResource Include="ReportTsBeli.rdlc" />
+    <EmbeddedResource Include="ReportTsJual.rdlc" />
+    <EmbeddedResource Include="Report\ReportMember.resx">
+      <DependentUpon>ReportMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportTsPembelian.resx">
+      <DependentUpon>ReportTsPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportTsPenjualan.resx">
+      <DependentUpon>ReportTsPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\StatusSepatuGaransi.resx">
+      <DependentUpon>StatusSepatuGaransi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\StatusSupplier.resx">
+      <DependentUpon>StatusSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\TransaksiBeli.resx">
+      <DependentUpon>TransaksiBeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\TransaksiGaransi.resx">
+      <DependentUpon>TransaksiGaransi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\TransaksiJual.resx">
+      <DependentUpon>TransaksiJual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\TransaksiMember.resx">
+      <DependentUpon>TransaksiMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="LoadCRUDSepatu.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LoadCRUDSepatu.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LoadCRUDSepatu.edmx.diagram">
+      <DependentUpon>LoadCRUDSepatu.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PRG2_KEL09DataSet.xsc">
+      <DependentUpon>PRG2_KEL09DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PRG2_KEL09DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRG2_KEL09DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRG2_KEL09DataSet.xss">
+      <DependentUpon>PRG2_KEL09DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PRG2_KEL09DataSet1.xsc">
+      <DependentUpon>PRG2_KEL09DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PRG2_KEL09DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRG2_KEL09DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRG2_KEL09DataSet1.xss">
+      <DependentUpon>PRG2_KEL09DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PRG2_KEL09DataSet2.xsc">
+      <DependentUpon>PRG2_KEL09DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PRG2_KEL09DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRG2_KEL09DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRG2_KEL09DataSet2.xss">
+      <DependentUpon>PRG2_KEL09DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PRG2_KEL09DataSet3.xsc">
+      <DependentUpon>PRG2_KEL09DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PRG2_KEL09DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRG2_KEL09DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRG2_KEL09DataSet3.xss">
+      <DependentUpon>PRG2_KEL09DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Report\DsTsMember.xsc">
+      <DependentUpon>DsTsMember.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DsTsMember.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsTsMember.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DsTsMember.xss">
+      <DependentUpon>DsTsMember.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DsTsPembelian.xsc">
+      <DependentUpon>DsTsPembelian.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DsTsPembelian.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsTsPembelian.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DsTsPembelian.xss">
+      <DependentUpon>DsTsPembelian.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DsTsPenjualan.xsc">
+      <DependentUpon>DsTsPenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DsTsPenjualan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsTsPenjualan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DsTsPenjualan.xss">
+      <DependentUpon>DsTsPenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\BgLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoadCRUDSepatu.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LoadCRUDSepatu.Context.cs</LastGenOutput>
+      <DependentUpon>LoadCRUDSepatu.edmx</DependentUpon>
+    </Content>
+    <Content Include="LoadCRUDSepatu.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoadCRUDSepatu.edmx</DependentUpon>
+      <LastGenOutput>LoadCRUDSepatu.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\D%27Shoes %281%29.png" />
+    <Content Include="Resources\D%27Shoes %282%29.png" />
+    <Content Include="Resources\D%27Shoes %283%29.png" />
+    <Content Include="Resources\D%27Shoes %284%29.png" />
+    <Content Include="Resources\d%27shoes %288%29.png" />
+    <Content Include="Resources\D%27Shoes.png" />
+    <Content Include="Resources\Picture1.png" />
+    <Content Include="Resources\Vector %281%29.png" />
+    <Content Include="Resources\Vector %282%29.png" />
+    <Content Include="Resources\tambah.png" />
+    <None Include="Resources\Vector %284%29.png" />
+    <None Include="Resources\Vector %285%29.png" />
+    <Content Include="Resources\Vector 1.png" />
+    <Content Include="Resources\Vector.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

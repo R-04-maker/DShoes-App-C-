@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PRG2_KEL09DataSet" targetNamespace="http://tempuri.org/PRG2_KEL09DataSet.xsd" xmlns:mstns="http://tempuri.org/PRG2_KEL09DataSet.xsd" xmlns="http://tempuri.org/PRG2_KEL09DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Setting" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Setting (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.D_Shoes.Properties.Settings.GlobalReference.Default.Setting" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LoadSepatuTableAdapter" GeneratorDataComponentClassName="LoadSepatuTableAdapter" Name="LoadSepatu" UserDataComponentName="LoadSepatuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Setting (Settings)" DbObjectName="PRG2_KEL09.dbo.LoadSepatu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_sepatu, deskripsi_kategori, merk, nama_sepatu, jenis_garansi, stock, harga_jual, harga_beli, gambar, pathfile FROM dbo.LoadSepatu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_sepatu" DataSetColumn="id_sepatu" />
+              <Mapping SourceColumn="deskripsi_kategori" DataSetColumn="deskripsi_kategori" />
+              <Mapping SourceColumn="merk" DataSetColumn="merk" />
+              <Mapping SourceColumn="nama_sepatu" DataSetColumn="nama_sepatu" />
+              <Mapping SourceColumn="jenis_garansi" DataSetColumn="jenis_garansi" />
+              <Mapping SourceColumn="stock" DataSetColumn="stock" />
+              <Mapping SourceColumn="harga_jual" DataSetColumn="harga_jual" />
+              <Mapping SourceColumn="harga_beli" DataSetColumn="harga_beli" />
+              <Mapping SourceColumn="gambar" DataSetColumn="gambar" />
+              <Mapping SourceColumn="pathfile" DataSetColumn="pathfile" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PRG2_KEL09DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PRG2_KEL09DataSet" msprop:Generator_UserDSName="PRG2_KEL09DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LoadSepatu" msprop:Generator_TableClassName="LoadSepatuDataTable" msprop:Generator_TableVarName="tableLoadSepatu" msprop:Generator_TablePropName="LoadSepatu" msprop:Generator_RowDeletingName="LoadSepatuRowDeleting" msprop:Generator_RowChangingName="LoadSepatuRowChanging" msprop:Generator_RowEvHandlerName="LoadSepatuRowChangeEventHandler" msprop:Generator_RowDeletedName="LoadSepatuRowDeleted" msprop:Generator_UserTableName="LoadSepatu" msprop:Generator_RowChangedName="LoadSepatuRowChanged" msprop:Generator_RowEvArgName="LoadSepatuRowChangeEvent" msprop:Generator_RowClassName="LoadSepatuRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_sepatu" msprop:Generator_ColumnVarNameInTable="columnid_sepatu" msprop:Generator_ColumnPropNameInRow="id_sepatu" msprop:Generator_ColumnPropNameInTable="id_sepatuColumn" msprop:Generator_UserColumnName="id_sepatu">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="deskripsi_kategori" msprop:Generator_ColumnVarNameInTable="columndeskripsi_kategori" msprop:Generator_ColumnPropNameInRow="deskripsi_kategori" msprop:Generator_ColumnPropNameInTable="deskripsi_kategoriColumn" msprop:Generator_UserColumnName="deskripsi_kategori">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="merk" msprop:Generator_ColumnVarNameInTable="columnmerk" msprop:Generator_ColumnPropNameInRow="merk" msprop:Generator_ColumnPropNameInTable="merkColumn" msprop:Generator_UserColumnName="merk">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_sepatu" msprop:Generator_ColumnVarNameInTable="columnnama_sepatu" msprop:Generator_ColumnPropNameInRow="nama_sepatu" msprop:Generator_ColumnPropNameInTable="nama_sepatuColumn" msprop:Generator_UserColumnName="nama_sepatu">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jenis_garansi" msprop:Generator_ColumnVarNameInTable="columnjenis_garansi" msprop:Generator_ColumnPropNameInRow="jenis_garansi" msprop:Generator_ColumnPropNameInTable="jenis_garansiColumn" msprop:Generator_UserColumnName="jenis_garansi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stock" msprop:Generator_ColumnVarNameInTable="columnstock" msprop:Generator_ColumnPropNameInRow="stock" msprop:Generator_ColumnPropNameInTable="stockColumn" msprop:Generator_UserColumnName="stock" type="xs:int" />
+              <xs:element name="harga_jual" msprop:Generator_ColumnVarNameInTable="columnharga_jual" msprop:Generator_ColumnPropNameInRow="harga_jual" msprop:Generator_ColumnPropNameInTable="harga_jualColumn" msprop:Generator_UserColumnName="harga_jual" type="xs:decimal" />
+              <xs:element name="harga_beli" msprop:Generator_ColumnVarNameInTable="columnharga_beli" msprop:Generator_ColumnPropNameInRow="harga_beli" msprop:Generator_ColumnPropNameInTable="harga_beliColumn" msprop:Generator_UserColumnName="harga_beli" type="xs:decimal" />
+              <xs:element name="gambar" msprop:Generator_ColumnVarNameInTable="columngambar" msprop:Generator_ColumnPropNameInRow="gambar" msprop:Generator_ColumnPropNameInTable="gambarColumn" msprop:Generator_UserColumnName="gambar" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="pathfile" msprop:Generator_ColumnVarNameInTable="columnpathfile" msprop:Generator_ColumnPropNameInRow="pathfile" msprop:Generator_ColumnPropNameInTable="pathfileColumn" msprop:Generator_UserColumnName="pathfile" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LoadSepatu" />
+      <xs:field xpath="mstns:id_sepatu" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
